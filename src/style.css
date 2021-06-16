@@ -1,0 +1,24 @@
+body{
+    background-color: indianred;
+}
+#mainRow{
+    margin:30px;
+    background-color: midnightblue;
+    border-radius: 10px;
+}
+#otherRow{
+    margin: 30px;
+    background-color: midnightblue;
+    border-radius: 10px;
+
+}
+
+.col{
+    text-align: center;
+    margin:20px;
+}
+
+label{
+    color:mistyrose;
+    margin-right:5px;
+}
