@@ -23,7 +23,7 @@ function clearAll(){
 function testfunction(){
     
     let count = 1; 
-    let billSet = document.createTextNode("Bill #"+ count+1);
+    //let billSet = document.createTextNode("Bill #"+ count+1);
 
     let mainRow = document.getElementById("mainCol");
 
