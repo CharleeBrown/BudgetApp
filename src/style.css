@@ -12,6 +12,12 @@ body{
     border-radius: 10px;
 
 }
+#otherRow2{
+    margin: 30px;
+    background-color: midnightblue;
+    border-radius: 10px;
+
+}
 
 .col{
     text-align: center;
