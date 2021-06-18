@@ -10,14 +10,12 @@ function totalRate(){
 
 if( rate != null &&  hours!=null)
 {
-document.addEventListener("keyup", totalRate);
-
-//rate.addEventListener("change", totalRate);
-
+    document.addEventListener("keyup", totalRate);
 }
+
 function clearAll(){
-    total.nodeValue = "";
-    rate.nodeValue = "";
+        total.nodeValue = "";
+        rate.nodeValue = "";
 }
 
 function testfunction(){
@@ -31,7 +29,9 @@ function testfunction(){
     
 
     newCol.setAttribute("class","col");
+    newCol.setAttribute("id", "mainCol");
     newCol.setAttribute("style", "text-align:center;");
+    newCol.setAttribute("style", "padding-right:50px;");
 
     let newInput = document.createElement("input");
     let text = document.createTextNode("Test");
