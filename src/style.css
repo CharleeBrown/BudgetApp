@@ -28,3 +28,10 @@ label{
     color:mistyrose;
     margin-right:5px;
 }
+input{
+    box-sizing: border-box;
+    width: 50%;
+}
+label{
+    width: 50%;
+}

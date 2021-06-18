@@ -4,6 +4,10 @@ let hours = document.getElementById("hours");
 
 
 
+function addBills(){
+    // The goal is to query every bill section and add it up in the bill total section. 
+}
+
 function totalRate(){
     total.value =  rate.value * hours.value;
 }
@@ -31,7 +35,7 @@ function testfunction(){
     newCol.setAttribute("class","col");
     newCol.setAttribute("id", "mainCol");
     newCol.setAttribute("style", "text-align:center;");
-    newCol.setAttribute("style", "padding-right:50px;");
+    newCol.setAttribute("style", "margin-right:5px;");
 
     let newInput = document.createElement("input");
     let text = document.createTextNode("Test");
