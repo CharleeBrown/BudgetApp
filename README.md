@@ -1,3 +1,2 @@
 ## BudgetApp
-<img src="/appImage.jpg" width = "600" height="300"/>
-This i
+### The BudgetApp is a web application where you can quickly calculate your pay after taxes and bills. 
