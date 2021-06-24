@@ -1,3 +1,3 @@
 ## BudgetApp
-![Screenshot]<img src="/appImage.jpg" width = "50" height="50"/>
+![Screenshot]<img src="/appImage.jpg" width = "180" height="180"/>
 This i
