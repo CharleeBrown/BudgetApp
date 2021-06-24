@@ -30,8 +30,15 @@ label{
 }
 input{
     box-sizing: border-box;
-    width: 50%;
+    width: 90%;
 }
 label{
     width: 50%;
+}
+
+.jumbotron{
+    text-align: center;
+    background-color: midnightblue;
+    color: indianred;
+    font-family: 'Dela Gothic One', cursive;
 }

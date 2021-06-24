@@ -5,19 +5,6 @@ let hours = document.getElementById("hours");
 let mainBill = document.getElementById("billTotal");
 let netVal = document.getElementById("net");
 
-mainBill.value = 0.00;
-
-function getBills(){
-
-    let bills = document.querySelectorAll("#bill");
-
-for(var i =0; i < bills.count; i++){
-    if(bills.value != null)
-        mainBill.value += bills.value;
-    }
-}
-   // document.querySelectorAll("#bill").forEach(el=>mainBill.value+=+el.value);
-
    let formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -26,41 +13,47 @@ for(var i =0; i < bills.count; i++){
     //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
     //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
   });
-  netVal.value == 0;
-function totalRate(){
-    
-    total.value = formatter.format(parseFloat(rate.value * hours.value));
-    netVal.value = formatter.format(parseFloat(total.value * 0.735)); 
-    //netVal.value = formatter.format(netVal);
 
+
+
+function totalRate(){
+    total.value = parseFloat(rate.value * hours.value);
+    let netBill = document.getElementById("billNet");
+    if(total.value != null){
+        netVal.value = "";
+        netVal.value = parseFloat(total.value * 0.735); 
+        netBill.value = netVal.value - mainBill.value; 
+        netBill.value = formatter.format(netBill.value);
+        netVal.value = formatter.format(netVal.value);
+        total.value = formatter.format(total.value);
+        
+        
+    }
 }
 
+function billNet(){
+   
 
-
+    
+}
 if( rate != null &&  hours!=null)
 {
     document.addEventListener("keyup", totalRate);
-    document.addEventListener("keydown", getBills);
-    
+   
 }
-
-
-
+document.addEventListener("keyup", totalBills);
+document.addEventListener("keyup", billNet);
 
 function clearAll(){
-        total.nodeValue = "";
-        rate.nodeValue = "";
+       
 }
 
 function testfunction(){
     
     let count = 1; 
     //let billSet = document.createTextNode("Bill #"+ count+1);
-
     let mainRow = document.getElementById("mainCol");
-
     let newCol = document.createElement("div")
-    
 
     newCol.setAttribute("class","col bills");
     newCol.setAttribute("id", "mainCol");
@@ -73,5 +66,22 @@ function testfunction(){
     
     newCol.appendChild(newInput);
     mainRow.appendChild(newCol);
-    
 }
+
+function totalBills()
+{
+    document.getElementById('billTotal').value = "";
+        let arr = document.getElementsByName('bill');
+        let tot=0;
+        console.log(arr.length);
+        for(let i=0;i<arr.length;i++){
+            if(parseInt(arr[i].value))
+            {
+                tot += parseInt(arr[i].value);
+               
+            }
+              document.getElementById('billTotal').value = tot;    
+        }
+      
+}
+
