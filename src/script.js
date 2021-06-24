@@ -44,6 +44,7 @@ if( rate != null &&  hours!=null)
 document.addEventListener("keyup", totalBills);
 document.addEventListener("keyup", billNet);
 
+
 function clearAll(){
        
 }
@@ -68,6 +69,18 @@ function testfunction(){
     mainRow.appendChild(newCol);
 }
 
+
+
+
+
+function lblSwitch(event){
+    event.textContext = prompt("Test");
+
+}
+
+
+    
+
 function totalBills()
 {
     document.getElementById('billTotal').value = "";
@@ -84,4 +97,6 @@ function totalBills()
         }
       
 }
+
+
 
