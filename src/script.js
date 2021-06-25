@@ -26,28 +26,17 @@ function totalRate(){
         netBill.value = formatter.format(netBill.value);
         netVal.value = formatter.format(netVal.value);
         total.value = formatter.format(total.value);
-        
-        
     }
 }
 
-function billNet(){
-   
 
-    
-}
 if( rate != null &&  hours!=null)
 {
     document.addEventListener("keyup", totalRate);
-   
 }
+
 document.addEventListener("keyup", totalBills);
 document.addEventListener("keyup", billNet);
-
-
-function clearAll(){
-       
-}
 
 function testfunction(){
     
@@ -69,17 +58,10 @@ function testfunction(){
     mainRow.appendChild(newCol);
 }
 
-
-
-
-
-function lblSwitch(event){
-    event.textContext = prompt("Test");
+function lblSwitch(this){
+    this.value = prompt("Test");
 
 }
-
-
-    
 
 function totalBills()
 {
@@ -91,11 +73,9 @@ function totalBills()
             if(parseInt(arr[i].value))
             {
                 tot += parseInt(arr[i].value);
-               
             }
               document.getElementById('billTotal').value = tot;    
         }
-      
 }
 
 
