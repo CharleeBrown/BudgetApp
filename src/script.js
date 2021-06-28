@@ -14,7 +14,12 @@ let netVal = document.getElementById("net");
     //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
   });
 
-
+function getText(clicked_id){
+    let txt = prompt("What's your middle name?");
+    
+    clicked_id = txt;
+    return clicked_id;
+}
 
 function totalRate(){
     total.value = parseFloat(rate.value * hours.value);
@@ -58,17 +63,14 @@ function testfunction(){
     mainRow.appendChild(newCol);
 }
 
-function lblSwitch(this){
-    this.value = prompt("Test");
 
-}
 
 function totalBills()
 {
     document.getElementById('billTotal').value = "";
         let arr = document.getElementsByName('bill');
         let tot=0;
-        console.log(arr.length);
+        //console.log(arr.length);
         for(let i=0;i<arr.length;i++){
             if(parseInt(arr[i].value))
             {
