@@ -43,34 +43,15 @@ if( rate != null &&  hours!=null)
 document.addEventListener("keyup", totalBills);
 document.addEventListener("keyup", billNet);
 
-function testfunction(){
-    
-    let count = 1; 
-    //let billSet = document.createTextNode("Bill #"+ count+1);
-    let mainRow = document.getElementById("mainCol");
-    let newCol = document.createElement("div")
-
-    newCol.setAttribute("class","col bills");
-    newCol.setAttribute("id", "mainCol");
-    newCol.setAttribute("style", "text-align:center;");
-    newCol.setAttribute("style", "margin-right:5px;");
-
-    let newInput = document.createElement("input");
-    let text = document.createTextNode("Test");
-    newInput.setAttribute("class", "bills");
-    
-    newCol.appendChild(newInput);
-    mainRow.appendChild(newCol);
-}
-
-
 
 function totalBills()
 {
+    // This function actuvates with keyup. 
+    // It iterates through the amount entered into the bill sections.
+    // Takes the sum and changes the total to reflect the sum.
     document.getElementById('billTotal').value = "";
         let arr = document.getElementsByName('bill');
         let tot=0;
-        //console.log(arr.length);
         for(let i=0;i<arr.length;i++){
             if(parseInt(arr[i].value))
             {
